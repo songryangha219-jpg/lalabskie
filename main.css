@@ -1,0 +1,275 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    /* color: #a68059; */
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #EAB178;
+
+    min-width: 528px;
+
+    position: relative;
+}
+
+header {
+
+    background: #F3CA9A;
+    box-shadow: 0 4px 12px rgba(91, 54, 25, 0.12);
+    /* position: relative; */
+    z-index: 10;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 50%);
+    background-color: #F6D1A0;
+    align-items: center;
+}
+
+.icon-cont {
+    max-width: 70px;
+    display: flex;
+    gap: .5rem;
+    padding-left: 1rem;
+}
+
+.title {
+
+    white-space: nowrap;
+}
+
+.statusbar {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    width: 350px;
+    height: 1em;
+    background-color: #F3CA9A;
+    border-radius: 1.5em;
+    position: relative;
+    border: 1px solid wheat;
+    margin: 2em;
+
+}
+
+.statusbar::before {
+    content: attr(data-label);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: .1em;
+    left: .1em;
+    bottom: .1em;
+    background-color: #9a6735;
+    width: calc(var(--width, 0) * 1%);
+    max-width: 99%;
+    border-radius: .5em;
+    
+
+}
+
+.statusbar > p {
+
+    position: absolute;
+    top: -2.3em;
+    color: #9a6735;
+    size: clamp(.8rem 1.5vw 1rem);
+
+}
+
+.question {
+    color: #514c47;
+    font-size: clamp(0.8rem, 2vw, 1.1rem);
+
+    text-align: center;
+    margin-top: -0.5em;
+}
+
+.icon-pic {
+    width: 100%;
+}
+
+.memory-cont {
+
+    padding-right: 2em;
+}
+
+.memory-cont > a {
+    display:block;
+    text-align: end;
+
+}
+
+.quiz-cont {
+    min-width: 200px;
+    max-width: 350px;
+
+    /* position: absolute; */
+    /* top: 50%; */
+    /* right: 50%; */
+
+    /* transform: translateY(-50%, -50%);  */
+
+    
+
+    margin-inline: auto;
+    background-color: #F5DCB3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(91, 54, 25, 0.12);
+
+    padding: 1rem 0;
+    transition: linear 200ms;
+    
+    
+}
+
+.quizProceed {
+
+    display: flex;
+    /* background-color: red; */
+    gap: 1em;
+
+    min-width: 200px;
+    max-width: 350px;
+
+}
+
+.proceedText {
+
+    color: #a77544;
+    /* color: red; */
+    size: clamp(1.5rem 2.5vw 2.2rem);
+    font-weight: bold;
+}
+.proceedBtn{
+
+    background-color: #9a6735;
+    padding: .7rem 1.2rem;
+    border: none;
+    border-radius: 4px;
+    color: wheat;
+
+
+}
+
+.animateQuiz {
+
+    /* transform: rotate(10deg); */
+    animation: wrongAnimation 200ms linear;
+}
+
+@keyframes wrongAnimation {
+    0% {
+        transform: rotate(10deg);
+    }
+    25% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    75% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+
+}
+
+.choices-cont {
+    
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, 300px);
+    gap: 1rem;
+
+   
+    /* min-width: 10px; */
+
+}
+
+.choicesCont{
+    /* width: 80%; */
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    border: 2px solid #EAB178;
+    border-radius: 5px;
+    padding: 0.5rem 0.5rem;
+    transition: 0.5s;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;    
+}
+
+.choicesCont:hover, :focus {
+
+    background-color: #8b6f47;
+
+
+    #choicesLabel {
+        color: #f7e2d2;
+    }
+}
+
+input[type="radio"] {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #8b6f47;
+    border-radius: 50%;
+    background-color: #fff3d6;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked {
+    background-color: #d99a6c;
+}
+#choicesLabel {
+
+    color: #917558;
+
+}
+
+.nextBtn {
+
+    margin-top: 1rem;
+
+    padding: 0.7rem 2rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #EAB178;
+    color: rgb(248, 240, 227);
+    border: 1px solid transparent;
+    transition: 0.5s;
+
+}
+
+.nextBtn:hover, :focus {
+
+    background-color: #F5DCB3;
+    border: 1px solid #EAB178;
+    color: #e9a663;
+
+}
+
+.quizIcon {
+
+    width: 30px;
+
+}
