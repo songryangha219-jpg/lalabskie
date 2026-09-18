@@ -41,7 +41,7 @@ proceedContainer2.appendChild(proceedBtn);
 */
 
 const questions = [
-    ["What is barya?", "Coins", "Change", "Condom", "Tiwala", "Condom"],
+    ["What is our call sign", "Meme", "Darling", "NENE", "Dyo", "Dyo"],
     ["What is our favorite restaurant?", "Ramen Nagi", "Italianis", "Ramen Kuroda", "Mc Donalds", "Ramen Kuroda"],
     ["What kind of chocolate I gave you the first time?", "White chocolate", "Dark salted chocolate", "nicknacks", "Tobleron", "Dark salted chocolate"],
     ["Where did we travel the first time we traveled together? (out of town)", "Bukidnon", "Dark Continent", "Tanay", "La Union", "La Union"],
